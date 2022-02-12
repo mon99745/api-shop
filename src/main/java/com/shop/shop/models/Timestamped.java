@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 @Getter
 @MappedSuperclass // 상속했을 때, 컬럼으로 인식하게 함
 @EntityListeners(AuditingEntityListener.class) // 생성/수정 시간을 자동으로 업데이트 함
-public abstract class TimeStamped { // abstract - 직접 생성은 불가하고 상속만 가능함
+public abstract class Timestamped { // abstract - 직접 생성은 불가하고 상속만 가능함
     @CreatedDate
     private LocalDateTime createdAt; // 생성 시간
 

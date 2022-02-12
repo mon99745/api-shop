@@ -8,11 +8,13 @@ import com.shop.shop.service.ProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+import javax.swing.*;
 import java.util.List;
 
 @RequiredArgsConstructor // 꼭 필요한 요소(final) 자동 생성
 @RestController // JSON 으로 응답하기 위한 RestController 라는 의미
 public class ProductRestController {
+
     private final ProductService productService;
     private final ProductRepository productRepository;
 
@@ -30,7 +32,8 @@ public class ProductRestController {
         return product;
     }
 
-    // 최저가(관심가격) 변경 @PutMapping("/api/products/{id}")
+    // 최저가(관심가격) 변경
+    @PutMapping("/api/products/{id}")
     public Long updateProduct(@PathVariable Long id, @RequestBody ProductMypriceRequestDto requestDto) {
         return productService.update(id, requestDto);
     }

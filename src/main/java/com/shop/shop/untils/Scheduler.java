@@ -14,6 +14,7 @@ import java.util.concurrent.TimeUnit;
 @RequiredArgsConstructor // 꼭 필요한 요소(final) 자동 생성
 @Component // 스프링이 필요 시 자동으로 생성하는 클래스 목록에 추가
 public class Scheduler {
+
     private final ProductRepository productRepository;
     private final ProductService productService;
     private final NaverShopSearch naverShopSearch;
@@ -22,10 +23,9 @@ public class Scheduler {
     @Scheduled(cron = "0 0 1 * * *") // cron - 초, 분, 시, 일, 월, 주 순서
     public void updatePrice() throws InterruptedException {
         System.out.println("가격 업데이트 실행");
-
         // 저장된 모든 관심상품을 조회
         List<Product> productList = productRepository.findAll();
-        for (int i = 0; i < productList.size(); i++) {
+        for (int i=0; i<productList.size(); i++) {
             // 1초에 한 상품 씩 조회 (Naver 제한)
             TimeUnit.SECONDS.sleep(1);
             // i 번째 관심 상품을 꺼낸다
