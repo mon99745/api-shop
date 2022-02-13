@@ -1,14 +1,13 @@
 package com.shop.shop.controller;
 
-import com.shop.shop.models.Product;
-import com.shop.shop.models.ProductMypriceRequestDto;
-import com.shop.shop.models.ProductRepository;
-import com.shop.shop.models.ProductRequestDto;
+import com.shop.shop.domain.Product;
+import com.shop.shop.dto.ProductMypriceRequestDto;
+import com.shop.shop.domain.ProductRepository;
+import com.shop.shop.dto.ProductRequestDto;
 import com.shop.shop.service.ProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
-import javax.swing.*;
 import java.util.List;
 
 @RequiredArgsConstructor // 꼭 필요한 요소(final) 자동 생성

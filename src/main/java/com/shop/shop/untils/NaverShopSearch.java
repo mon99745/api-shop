@@ -1,6 +1,6 @@
 package com.shop.shop.untils;
 
-import com.shop.shop.models.ItemDto;
+import com.shop.shop.dto.ItemDto;
 import org.json.JSONArray;
 import org.json.JSONObject;
 

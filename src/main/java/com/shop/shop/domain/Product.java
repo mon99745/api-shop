@@ -1,5 +1,8 @@
-package com.shop.shop.models;
+package com.shop.shop.domain;
 
+import com.shop.shop.dto.ItemDto;
+import com.shop.shop.dto.ProductMypriceRequestDto;
+import com.shop.shop.dto.ProductRequestDto;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -8,7 +11,7 @@ import javax.persistence.*;
 @Getter // Lombok이 getter 자동 생성
 @NoArgsConstructor // 기본 생성자 자동 생성
 @Entity // 이 클래스는 DB의 테이블 역할
-public class Product extends Timestamped{ // 생성,수정 시간을 자동으로 생성하도록 상속받음
+public class Product extends Timestamped { // 생성,수정 시간을 자동으로 생성하도록 상속받음
 
     // ID가 자동으로 생성 및 증가
     @GeneratedValue(strategy = GenerationType.AUTO)

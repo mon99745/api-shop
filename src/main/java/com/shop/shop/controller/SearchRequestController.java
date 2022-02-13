@@ -1,6 +1,6 @@
 package com.shop.shop.controller;
 
-import com.shop.shop.models.ItemDto;
+import com.shop.shop.dto.ItemDto;
 import com.shop.shop.untils.NaverShopSearch;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;

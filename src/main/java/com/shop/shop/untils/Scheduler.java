@@ -1,8 +1,8 @@
 package com.shop.shop.untils;
 
-import com.shop.shop.models.ItemDto;
-import com.shop.shop.models.Product;
-import com.shop.shop.models.ProductRepository;
+import com.shop.shop.dto.ItemDto;
+import com.shop.shop.domain.Product;
+import com.shop.shop.domain.ProductRepository;
 import com.shop.shop.service.ProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.scheduling.annotation.Scheduled;
